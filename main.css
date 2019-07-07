@@ -1,0 +1,49 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+.header {
+    width: 100%;
+    list-style: none;
+    padding: 35px 0px;
+    display: inline-block;
+    font-size: 30px;
+    border-style: solid;
+    border-color: black;
+}
+
+.top-left {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.top-right {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+}
+
+form {
+    display: block;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 15%;
+    text-align: left;
+}
+
+.submit{
+    border: none;
+    width: 100%;
+
+}
+
+.question, .ans1, .ans2, .ans3, .ans4, .submit{
+    margin: 10px;
+    text-align: left;
+    border-style: solid;
+    border-color: black;
+}
