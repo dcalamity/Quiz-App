@@ -33,6 +33,7 @@ form {
     margin-right: 80px;
     margin-top: 15%;
     text-align: left;
+
 }
 
 .submit{
@@ -46,4 +47,5 @@ form {
     text-align: left;
     border-style: solid;
     border-color: black;
+    font-size: 25px;
 }
