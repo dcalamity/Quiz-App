@@ -41,7 +41,7 @@ form {
 
 }
 
-.question, .ans1, .ans2, .ans3, .ans4, .submit{
+.question, .ans, .submit{
     margin: 10px;
     text-align: left;
     border-style: solid;
