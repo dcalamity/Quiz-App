@@ -10,14 +10,15 @@
     padding: 35px 0px;
     display: inline-block;
     font-size: 30px;
-    border-style: solid;
-    border-color: black;
+    border: 1px solid lightgrey;
 }
 
 .top-left {
     width: 50%;
     float: left;
     text-align: left;
+    border: 1px solid lightgrey;
+
 }
 
 .top-right {
@@ -25,6 +26,7 @@
     float: left;
     text-align: right;
     padding-right: 20px;
+    border: 1px solid lightgrey;
 }
 
 form {
@@ -33,19 +35,47 @@ form {
     margin-right: 80px;
     margin-top: 15%;
     text-align: left;
+    border: 1px solid lightgrey;
 
 }
 
-.submit{
-    border: none;
+.start, .startbutton{
+    text-align: center;
+}
+
+h1 {
+    border: 1px solid lightgrey;
+}
+
+.startbutton {
     width: 100%;
-
+    margin-top: 17%;
+    border: none;
+    font-size: 30px;
 }
 
-.question, .ans, .submit{
+.submit, .nextbttn {  
+    width: 100%;
+    border: none;
+}
+
+.question, .ans, .submit {
     margin: 10px;
     text-align: left;
-    border-style: solid;
-    border-color: black;
+    border: 1px solid lightgrey;
     font-size: 25px;
+    width: 100%;
 }
+
+.correctanswer, .nextbttn {
+    text-align: center;
+    border: 1px solid lightgrey;
+    font-size: 25px;
+    margin-top: 10%;
+}
+.correctanswer{
+    padding: 20px;
+}
+
+
+
