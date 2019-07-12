@@ -157,7 +157,11 @@ function finalResultsScreen(){
 
 }
 
-function restartquiz()
+function restartQuiz() {
+    $('.question-form').on('click', function (event){
+        location.reload();
+    }
+)}
 
 
 function quiz () {
