@@ -142,8 +142,13 @@ main {
 
 body {
   background-image: url(https://wallpapertag.com/wallpaper/full/7/1/1/936097-hbo-game-of-thrones-wallpaper-1920x1080-for-lockscreen.jpg);
+  background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
 }
 .startQuiz, #questionForm, .question-form {
     background-color: rgba(69, 69, 70, .9);
