@@ -163,7 +163,7 @@ body {
     background-color: rgba(69, 69, 70, .5);
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
   
 .top-left{
     padding-left: 4%;
