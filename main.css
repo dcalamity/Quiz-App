@@ -2,7 +2,6 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    overflow-wrap: break-word;
 }
 .header {
     width: 100%;
@@ -65,7 +64,9 @@ main {
     text-align: left;
     
     font-size: 25px;
+    /*
     width: 100%;
+    */
 }
 
 .submit, .nextbttn{
@@ -151,6 +152,9 @@ body {
     border-radius: 4px;
     color: white;
     padding-top: 1%;
+}
+h2 {
+    overflow-wrap: break-word;
 }
 .header {
     color: white;
