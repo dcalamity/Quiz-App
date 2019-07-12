@@ -158,7 +158,9 @@ function finalResultsScreen(){
 }
 
 function restartQuiz() {
-    $('.question-form').on('click', function (event){
+    $('.question-form').on('click', '.restart', function(event){
+        event.preventDefault()
+        console.log('clicked on restart button')
         location.reload();
     }
 )}
@@ -170,5 +172,6 @@ function quiz () {
     renderQuestion()
     submitAns()
     onNext()
+    restartQuiz()
 };
 $(quiz);
