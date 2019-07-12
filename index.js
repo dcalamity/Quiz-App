@@ -39,16 +39,18 @@ return `<div id = questionForm ><h2 class="question">${DATA[questionNumber].ques
     </form>
     </div>`
 };
-//the result of createQuestion is copied using the html method
-// and then added to the question form class that is now not hidden
+//the result of createQuestion is to delete everything in the
+//question form using the html method
+// and then adds the updated questions set
 function renderQuestion (){
     $('.question-form').html(createQuestion());
 }
 
-
+//listening to a submit on the document form, 
 //show if the user got the correct answer
+//or wrong answer
+//activates the got the wrong answer or the correct answer function
 //update score
-//
 function submitAns(){
     $(document).on('submit', 'form', function (event){
         console.log('submitpressed')
@@ -76,34 +78,32 @@ function submitAns(){
         })
     }
 
-
+//if user got answer correct then it the question form class gets updated
+//.html function erases everything in the question form dic and replaces it 
+//with the results 
+//if answer is correct then the score get updated
 function gotItRight (){
-    $('.question-form').html(` <h2 class="results">
-    Great Job!
-    </h2>
-    <h3 class="description">
-    The correct answer is ${DATA[questionNumber].correctAnswer}
-    </h3>    
-    <button type="button" class="nextbttn">
-     Next
-    </button>`)
+    $('.question-form').html(` 
+        <h2 class="results">Great Job!</h2>
+        <h3 class="description">The correct answer is ${DATA[questionNumber].correctAnswer}</h3>    
+        <button type="button" class="nextbttn">Next</button>`)
     score += 1;
     $('.pointScore').html(`${score}/${numberOfQuestions}`)
 
 }
-
+//if user got answer correct then it the question form class gets updated
+//.html function erases everything in the question form dic and replaces it 
+//with the results 
 function gotItWrong (){
-    $('.question-form').html(` <h2 class="results">
-    You got the wrong answer!
-    </h2>
-    <h3 class="description">
-    The correct answer is ${DATA[questionNumber].correctAnswer}
-    </h3>    
-    <button type="button" class="nextbttn">
-     Next
-    </button>`)
+    $('.question-form').html(` 
+        <h2 class="results">You got the wrong answer!</h2>
+        <h3 class="description">The correct answer is ${DATA[questionNumber].correctAnswer}</h3>    
+        <button type="button" class="nextbttn">Next</button>`)
 }
-
+//listens to the next button being clicked, 
+//if question number is less then the length of the data
+//then render the next question
+//if not then you can call the final result screen
 function onNext (){
     $('.question-form').on('click','.nextbttn', function(event) {
         //alert('NextButtonClicked!')
@@ -115,48 +115,40 @@ function onNext (){
         }
     })
 }
-
+//depending on the score the final results screen will display
+//a different results screen
 function finalResultsScreen(){
     if (score < 5){
         console.log('You did horrible');
-        $('.question-form').html(`<form>   
-            <h2 class="results"> 
-                 You are not worthy to sit on the throne
-            </h2>
+        $('.question-form').html(`
+        <form>   
+            <h2 class="results">You are not worthy to sit on the throne</h2>
             <p> You got ${score} points, you need to rewatch the whole series!</p>
-            <button type="button" class="restart" name="restartquiz ">
-               Restart
-             </button>
-           </form>  `)
+            <button type="button" class="restart" name="restartquiz ">Restart</button>
+        </form>  `)
     }
     else if ( score <= 7){
         console.log('You did "okay"')
-        $('.question-form').html(`<form>   
-        <h2 class="results"> 
-             You are not worthy to sit on the throne
-        </h2>
-        <p> You got ${score} points, you're almost there!</p>
-        <button type="button" class="restart" name="restartquiz ">
-           Restart
-         </button>
+        $('.question-form').html(`
+        <form>   
+            <h2 class="results">You are not worthy to sit on the throne</h2>
+            <p> You got ${score} points, you're almost there!</p>
+            <button type="button" class="restart" name="restartquiz ">Restart</button>
        </form>  `)
     }
     else {
         console.log('you did pretty good!')
-        $('.question-form').html(`<form>   
-        <h2 class="results"> 
-             You are worthy to sit on the throne
-        </h2>
-        <p> You got ${score} points, you must of watched these episodes last night.</p>
-        <button type="button" class="restart" name="restartquiz ">
-           Restart
-         </button>
+        $('.question-form').html(`
+        <form>   
+            <h2 class="results">You are worthy to sit on the throne</h2>
+            <p> You got ${score} points, you must of watched these episodes last night.</p>
+            <button type="button" class="restart" name="restartquiz ">Restart</button>
        </form>  `)
     }
 
 
 }
-
+//function listens for the the restart button being pressed
 function restartQuiz() {
     $('.question-form').on('click', '.restart', function(event){
         event.preventDefault()
