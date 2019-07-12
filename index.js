@@ -161,7 +161,7 @@ function restartQuiz() {
     $('.question-form').on('click', '.restart', function(event){
         event.preventDefault()
         console.log('clicked on restart button')
-        location.reload();
+        window.location.reload();
     }
 )}
 
