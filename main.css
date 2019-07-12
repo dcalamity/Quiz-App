@@ -166,3 +166,13 @@ body {
 #questionForm{
     background-color: rgba(69, 69, 70, .5);
 }
+
+@media only screen and (max-width: 320px) {
+  
+.top-left{
+    padding-left: 4%;
+}
+.top-right{
+    padding-right: 4%;
+}
+}
