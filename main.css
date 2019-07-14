@@ -157,11 +157,12 @@ body {
      while the background image is loading */
   background-color: #464646;
 }
-.startQuiz, #questionForm, .question-form {
+.startQuiz, .question-form {
     background-color: rgba(69, 69, 70, .9);
     border-radius: 4px;
     color: #bfbfbf;
 }
+
 h2 {
     overflow-wrap: break-word;
 }
