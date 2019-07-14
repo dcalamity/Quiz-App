@@ -20,7 +20,7 @@ function createQuestion (){
 return `<div id = questionForm ><h2 class="question">${DATA[questionNumber].question}</h2>
 <form class="answers">
     <div class="ans">
-        <input type="radio" value="${DATA[questionNumber].answers[0]}" name="answer">
+        <input type="radio" value="${DATA[questionNumber].answers[0]}" name="answer" required>
         <a>${DATA[questionNumber].answers[0]}</a>
     </div>
     <div class="ans">
