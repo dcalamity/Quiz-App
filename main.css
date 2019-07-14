@@ -175,6 +175,10 @@ h2 {
     background-color: rgba(69, 69, 70, .5);
 }
 
+input:hover {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 375px) {
   
     .top-left{
